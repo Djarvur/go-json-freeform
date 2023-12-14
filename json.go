@@ -26,6 +26,11 @@ func (r Raw) MarshalJSON() ([]byte, error) {
 	return json.Marshal(r.payload) //nolint:wrapcheck
 }
 
+// IsNil returns true in case there is no useful value inside Raw.
+func (r Raw) IsNil() bool {
+	return r.payload == nil
+}
+
 // AsString returns a string contained in the Raw or empty string in case there is not a string.
 func (r Raw) AsString() string {
 	v, _ := r.payload.(string)

@@ -39,6 +39,8 @@ func TestRaw(t *testing.T) {
 	require.Equal(t, freeform.Raw{}, raw.AsMap().Get("mess").AsMap().Get("nonexistent").AsMap().Get(""))
 	require.Equal(t, "", raw.AsString())
 	require.False(t, raw.AsBool())
+	require.True(t, raw.AsMap().Get("nonexistent").IsNil())
+	require.True(t, raw.AsMap().Get("null value").IsNil())
 	require.True(t, raw.AsMap().Get("bool true").AsBool())
 	require.False(t, raw.AsMap().Get("bool false").AsBool())
 }
