@@ -13,11 +13,11 @@ jobs:
       - name: Check out
         uses: actions/checkout@v2.3.4
       - name: golangci-lint
-        uses: reviewdog/action-golangci-lint@v1.21
+        uses: reviewdog/action-golangci-lint@v2.5.0
   test:
     strategy:
       matrix:
-        go-version: [1.13.x, 1.14.x]
+        go-version: [1.20.x, 1.21.x]
         platform: [ubuntu-latest]
     runs-on: ${{ matrix.platform }}
     steps:
@@ -30,6 +30,6 @@ jobs:
       - name: go test
         run: go test -v -race -coverprofile=profile.cov ./...
       - name: Send coverage
-        uses: shogo82148/actions-goveralls@v1.4.5
+        uses: shogo82148/actions-goveralls@v1.8.0
         with:
           path-to-profile: profile.cov
