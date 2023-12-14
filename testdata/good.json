@@ -6,6 +6,8 @@
   200,
   400
  ],
+ "bool false": false,
+ "bool true": true,
  "map": {
   "0": 100,
   "1": 500,

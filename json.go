@@ -40,6 +40,13 @@ func (r Raw) AsNumber() float64 {
 	return v
 }
 
+// AsBool returns a boolean contained in the Raw or false in case there is not a boolean.
+func (r Raw) AsBool() bool {
+	v, _ := r.payload.(bool)
+
+	return v
+}
+
 // AsList returns an array (actually slice) contained in the Raw or nil in case there is not an array.
 func (r Raw) AsList() List {
 	l, ok := r.payload.([]interface{})
