@@ -1,0 +1,4 @@
+= cryptowrap image:https://godoc.org/github.com/Djarvur/go-json-freeform?status.svg["GoDoc",link="http://godoc.org/github.com/Djarvur/go-json-freeform"] image:https://github.com/Djarvur/go-json-freeform/workflows/Test/badge.svg?branch=master["Build Status"] image:https://coveralls.io/repos/Djarvur/go-json-freeform/badge.svg?branch=master&service=github["Coverage Status",link="https://coveralls.io/github/Djarvur/go-json-freeform?branch=master"]
+
+
+Simple unknown structure json unmarshaler and traveler
